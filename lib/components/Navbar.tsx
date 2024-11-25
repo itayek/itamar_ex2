@@ -14,6 +14,7 @@ export default function Navbar() {
         </Link>
         <Link href="/tic-tac-toe">Tic-Tac-Toe</Link>
         <Link href="/nasa">NASA</Link>
+        <Link href="/design">Design</Link>
         {DEMOS_ENABLED ? <Link href="/demos">Demos</Link> : null}
       </nav>
     </header>

@@ -1,0 +1,98 @@
+/* Add Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akatab&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  width: 100%;
+  background: linear-gradient(to bottom, #ffe3e3, #ffc2c2);
+}
+
+.logo {
+  width: 178px;
+  height: 135px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-family: 'Cantora One', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 21px;
+  letter-spacing: -0.33px;
+  color: #FF7451;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  font-family: 'Cantora One', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 21px;
+  letter-spacing: -0.33px;
+  color: #FF7451;
+}
+
+.description {
+  margin-bottom: 30px;
+  font-family: 'Akatab', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.67px;
+  color: #FD7F62;
+}
+
+.button {
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 168.1px;
+  height: 51px;
+  background: #FFA4A5;
+  box-shadow: 0px 0.33px 0px rgba(60, 60, 67, 0.29),
+    0px -0.33px 0px rgba(60, 60, 67, 0.29);
+}
+
+.button:hover {
+  background: #ff5e5e;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.inputField:focus {
+  border-color: #ff5e5e;
+  outline: none;
+}

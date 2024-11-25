@@ -30,9 +30,26 @@ export default function Nasa() {
             <h2 className={styles.cardTitle}>{item.title}</h2>
             <p className={styles.date}>{item.date}</p>
             {item.media_type === "image" ? (
-              <img src={item.url} alt={item.title} className={styles.image} />
-            ) : (
-              <p className={styles.error}>Video content cannot be displayed</p>
+              <img
+               src={item.url}
+               alt={item.title}
+               className={styles.image}
+               loading="lazy"
+              />
+            ) : item.media_type === "video" ? (
+              <div className={styles.videoContainer}>
+                <iframe
+                  src={item.url}
+                  title={item.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className={styles.video}
+                ></iframe>
+              </div>
+            ):
+            (
+              <p className={styles.error}>Content cannot be displayed</p>
             )}
             <p className={styles.explanation}>{item.explanation}</p>
           </div>
