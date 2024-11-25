@@ -1,0 +1,119 @@
+/* Container for the game */
+.container {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 400px;
+    color: #333;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #0070f3; /* Blue accent */
+    text-align: center;
+    background-color: #f0f8ff; /* Soft blue background */
+    padding: 15px 20px;
+    border: 4px solid #0070f3; /* Matching blue border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: fit-content; /* Content-based width */
+    margin: 20px auto; /* Center horizontally */
+  }
+  
+  
+  .status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #0070f3; /* Blue accent */
+    text-align: center;
+    background-color: #f0f8ff; /* Soft blue background */
+    padding: 10px 15px;
+    border: 2px solid #0070f3; /* Matching blue border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: fit-content; /* Content-based width */
+    margin: 10px auto; /* Center horizontally */
+  }
+  
+  /* Board styles */
+  .board {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Square styles */
+  .square {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 2px solid #0070f3; /* Blue borders */
+    border-radius: 5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .square:hover {
+    background-color: #e6f7ff;
+    transform: scale(1.05);
+  }
+  
+  /* Winner highlight */
+  .square.winner {
+    background-color: #b3e5fc; /* Light blue for winning squares */
+    color: #0070f3; /* Blue text */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .square {
+      width: 80px;
+      height: 80px;
+      font-size: 2rem;
+    }
+  
+    .board {
+      padding: 10px;
+    }
+  }
+
+  .resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0070f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .resetButton:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+  }
+  
+  .resetButton:active {
+    transform: scale(1);
+  }
+  
+  
