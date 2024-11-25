@@ -7,18 +7,24 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: #ddd;
 }
 
 .card {
-  text-align: center;
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 320px;
-  width: 100%;
-  background: linear-gradient(to bottom, #ffe3e3, #ffc2c2);
-}
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    height: 100%;
+    background: linear-gradient(to bottom, #ffe3e3, #ffc2c2); /* Background gradient */
+  }
 
 .logo {
   width: 178px;
@@ -62,10 +68,11 @@
   color: #FD7F62;
 }
 
+
 .button {
   color: white;
   border: none;
-  border-radius: 25px;
+  border-radius: 50px;
   padding: 10px 20px;
   font-size: 1rem;
   margin: 10px 0;
@@ -87,12 +94,98 @@
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  text-align: center;
+  border-radius: 50px;
   font-size: 1rem;
   box-sizing: border-box;
+  background: #FFA4A5;
+  background-repeat: no-repeat;
+  background-position: 20px left; /* Position for the image */
+  background-size: 40px 40px; /* Adjust size of the image */
 }
 
 .inputField:focus {
+    text-align: center;
   border-color: #ff5e5e;
   outline: none;
+  background-image: url('/cursor.svg');
+  
 }
+
+.inputField::placeholder {
+    color: white; /* Makes the placeholder text white */
+    opacity: 1; /* Ensures full opacity */
+    text-align: center;
+  }
+
+.inputError {
+    border-color: red !important;
+  }
+  
+  .errorMessage {
+    color: red;
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 20px; /* Reserve space even if no error */
+    margin-top: 10px; /* Add space below the error */ /* Hide by default */
+    visibility: hidden;
+  }
+
+  .errorMessage.show {
+    visibility: visible; /* Add space below the error */ /* Hide by default */
+  }
+
+  .forgotPassword {
+    margin-top: 10px;
+    color: #ff7451;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 100px;
+  }
+
+  .forgotPassword:hover {
+    color: #ff5e5e;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+      height: auto; /* Adjust the height for scrolling on smaller screens */
+    }
+  
+    .card {
+      max-width: 90%; /* Reduce the card width on mobile */
+      padding: 15px;
+      margin: auto;
+    }
+  
+    .title, .subtitle {
+      font-size: 20px; /* Smaller font sizes for titles and subtitles */
+    }
+  
+    .description {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  
+    .button {
+      width: 100%; /* Buttons span the card width */
+      font-size: 1rem;
+    }
+  
+    .inputField {
+      font-size: 0.9rem; /* Smaller text for inputs */
+      padding: 8px 8px 8px 50px; /* Adjust padding for the white cursor */
+    }
+  }
+
+  .html {
+    font-size: 16px; /* Base font size */
+  }
+  
+  @media (max-width: 768px) {
+    .html {
+      font-size: 14px; /* Smaller font for mobile */
+    }
+  }
+
