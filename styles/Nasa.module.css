@@ -9,7 +9,7 @@
   .title {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #004080;
+    color: #ff7451;
   }
   
   .cards {
@@ -20,7 +20,7 @@
   }
   
   .card {
-    background-color: #ffffff;
+    background-color: #f59393;;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

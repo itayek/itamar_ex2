@@ -89,9 +89,6 @@
   color: white;
   text-align: center;
   font-size: 1rem;
-  background-repeat: no-repeat;
-  background-position: 5% left; /* Position for the image */
-  background-size: 50px 50px; /* Adjust size of the image */
 }
 
 .inputField + .inputField {
@@ -102,9 +99,12 @@
   text-align: center;
   border-color: #ff5e5e;
   outline: none;
-  background-image: url('/cursor.svg');
-  
 }
+
+/* Make the placeholder invisible when input is focused */
+.inputField:focus::placeholder {
+    opacity: 0; /* Placeholder disappears */
+  }
 
 .inputField::placeholder {
     color: white; /* Makes the placeholder text white */
