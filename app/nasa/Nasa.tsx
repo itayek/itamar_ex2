@@ -23,7 +23,7 @@ export default function Nasa() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>NASA's Astronomy Picture of the Day</h1>
+      <h1 className={styles.title}>NASA&apos;s Astronomy Picture of the Day</h1>
       <div className={styles.cards}>
         {apodData.map((item, index) => (
           <div key={index} className={styles.card}>
