@@ -2,110 +2,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akatab&display=swap');
 
+/* Container styles */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #ddd;
+  position: relative;
+  background: #f5f5f5; /* Optional background */
 }
 
+/* Card styles */
 .card {
-    display: flex; /* Use flexbox for centering */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 320px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    height: 100%;
-    background: linear-gradient(to bottom, #ffe3e3, #ffc2c2); /* Background gradient */
-  }
+  position: relative; /* Establish positioning context */
+  width: 320px; /* Fixed width (e.g., for a phone screen) */
+  height: 600px; /* Fixed height */
+  background: linear-gradient(to bottom, #ffe3e3, #ffc2c2);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures no content spills outside */
+}
 
+/* Logo styles */
 .logo {
-  width: 178px;
-  height: 135px;
-  margin-bottom: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  top: 5%; /* 5% from the top of the card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 200x;
 }
 
+/* Title styles */
 .title {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  transform: translateX(-10%);
   font-family: 'Cantora One', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 21px;
+  font-weight: 600;
+  font-size: 1.5rem;
   letter-spacing: -0.33px;
-  color: #FF7451;
+  color: #ff7451;
+  text-align: center;
 }
 
+/* Subtitle styles */
 .subtitle {
-  margin-bottom: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: 'Cantora One', sans-serif;
-  font-style: normal;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 21px;
   letter-spacing: -0.33px;
-  color: #FF7451;
+  font-size: 1rem;
+  color: #ff7451;
+  text-align: center;
 }
 
+/* Description styles */
 .description {
-  margin-bottom: 30px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: 'Akatab', sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  color: #fd7f62;
+  text-align: center;
   font-size: 19px;
   line-height: 21px;
-  text-align: center;
   letter-spacing: 0.67px;
-  color: #FD7F62;
+  width: 80%; /* Takes up 80% of the card width */
 }
 
-
-.button {
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  margin: 10px 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 168.1px;
-  height: 51px;
-  background: #FFA4A5;
-  box-shadow: 0px 0.33px 0px rgba(60, 60, 67, 0.29),
-    0px -0.33px 0px rgba(60, 60, 67, 0.29);
-}
-
-.button:hover {
-  background: #ff5e5e;
-}
-
+/* Input fields */
 .inputField {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  padding: 12px;
+  top: 50%; /* Positioned relative to card */
+  border-radius: 25px;
+  background: #ffa4a5;
+  color: white;
   text-align: center;
-  border-radius: 50px;
   font-size: 1rem;
-  box-sizing: border-box;
-  background: #FFA4A5;
   background-repeat: no-repeat;
-  background-position: 20px left; /* Position for the image */
-  background-size: 40px 40px; /* Adjust size of the image */
+  background-position: 5% left; /* Position for the image */
+  background-size: 50px 50px; /* Adjust size of the image */
+}
+
+.inputField + .inputField {
+  top: 60%; /* Adjust spacing for the second input field */
 }
 
 .inputField:focus {
-    text-align: center;
+  text-align: center;
   border-color: #ff5e5e;
   outline: none;
   background-image: url('/cursor.svg');
@@ -121,71 +115,111 @@
 .inputError {
     border-color: red !important;
   }
+
+/* Forgot Password */
+.forgotPassword {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #ff7451;
+  text-decoration: underline;
+}
+
+.forgotPassword:hover {
+    color: #ed1212;
+}
+
+/* Error Message */
+.errorMessage {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: red;
+  text-align: center;
+  visibility: hidden;
+}
+
+.errorMessage.show {
+  visibility: visible;
+}
+
+/* Buttons */
+.button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 40px;
+  background: #ffa4a5;
+  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Akatab', sans-serif;
+  text-align: center;
+  line-height: 40px; /* Vertically centers text */
+  cursor: pointer;
+  bottom: 4%; /* Positions above the bottom edge */
+}
+
+.button + .button {
+  bottom: 13%; /* Adjust spacing for the second button */
+}
+
+.button:hover {
+  background: #ff5e5e;
+}
+
+
+.logoAnim {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) scale(0); /* Start small */
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -0.33px;
+    width: 250px;
+    height: 200x;
+    animation: grow 1.5s forwards; /* Add animation to grow */
+  }
   
-  .errorMessage {
-    color: red;
-    text-align: center;
-    font-size: 0.9rem;
-    min-height: 20px; /* Reserve space even if no error */
-    margin-top: 10px; /* Add space below the error */ /* Hide by default */
-    visibility: hidden;
+  @keyframes grow {
+    from {
+      transform: translateX(-50%) scale(0); /* Start small */
+    }
+    to {
+      transform: translateX(-50%) scale(1); /* End at normal size */
+    }
   }
-
-  .errorMessage.show {
-    visibility: visible; /* Add space below the error */ /* Hide by default */
+  
+  /* Middle Title */
+  .midtitle {
+    position: absolute;
+  top: 60%;
+  left: 25%;
+  transform: translateX(-10%);
+  font-family: 'Cantora One', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.33px;
+  color: #ff7451;
+  text-align: center;
   }
-
-  .forgotPassword {
-    margin-top: 10px;
+  
+  /* Middle Subtitle */
+  .midsubtitle {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cantora One', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.33px;
+    font-size: 1rem;
     color: #ff7451;
-    cursor: pointer;
-    text-decoration: underline;
-    margin-bottom: 100px;
+    text-align: center;
   }
-
-  .forgotPassword:hover {
-    color: #ff5e5e;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-      height: auto; /* Adjust the height for scrolling on smaller screens */
-    }
-  
-    .card {
-      max-width: 90%; /* Reduce the card width on mobile */
-      padding: 15px;
-      margin: auto;
-    }
-  
-    .title, .subtitle {
-      font-size: 20px; /* Smaller font sizes for titles and subtitles */
-    }
-  
-    .description {
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-  
-    .button {
-      width: 100%; /* Buttons span the card width */
-      font-size: 1rem;
-    }
-  
-    .inputField {
-      font-size: 0.9rem; /* Smaller text for inputs */
-      padding: 8px 8px 8px 50px; /* Adjust padding for the white cursor */
-    }
-  }
-
-  .html {
-    font-size: 16px; /* Base font size */
-  }
-  
-  @media (max-width: 768px) {
-    .html {
-      font-size: 14px; /* Smaller font for mobile */
-    }
-  }
-
